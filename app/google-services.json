@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086390676934",
+    "project_id": "eucdata-d6496",
+    "storage_bucket": "eucdata-d6496.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086390676934:android:6adb3281b7893aaf4656c7",
+        "android_client_info": {
+          "package_name": "com.example.euc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086390676934-j62latekiq9ls2p3rdism4qsglbjghat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw6yPaxnhqZcxKHuUx2Yi3n63vQpOQTeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086390676934-j62latekiq9ls2p3rdism4qsglbjghat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

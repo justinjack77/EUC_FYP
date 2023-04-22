@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">FYPAPP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">HOME</string>
+    <string name="add">ADD</string>
+    <string name="search">Search</string>
+    <string name="person">Person</string>
+    <string name="setting">Setting</string>
+    <string name="login">Login</string>
+    <string name="title_activity_sign_in">SignInActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string-array name="device_types">
+        <item>Light</item>
+        <item>Fan</item>
+        <item>Heater</item>
+        <item>Air Conditioner</item>
+        <item>Refrigerator</item>
+        <item>Washing Machine</item>
+        <item>Oven</item>
+        <item>Microwave</item>
+        <item>Television</item>
+        <item>Speaker</item>
+    </string-array>
+
+    <string-array name="gpio_pins">
+        <item>GPIO0</item>
+        <item>GPIO1</item>
+        <item>GPIO2</item>
+        <item>GPIO3</item>
+        <item>GPIO4</item>
+        <item>GPIO5</item>
+        <item>GPIO6</item>
+        <item>GPIO7</item>
+        <item>GPIO8</item>
+        <item>GPIO9</item>
+        <item>GPIO10</item>
+        <item>GPIO11</item>
+        <item>GPIO12</item>
+        <item>GPIO13</item>
+        <item>GPIO14</item>
+        <item>GPIO15</item>
+        <item>GPIO16</item>
+    </string-array>
+
+    <string name="select_device_type_prompt">Select device type</string>
+
+</resources>

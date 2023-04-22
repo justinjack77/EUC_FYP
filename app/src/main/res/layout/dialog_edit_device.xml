@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device Name" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter device name" />
+
+    <TextView
+        android:id="@+id/type_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device Type" />
+
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/device_types" />
+
+    <TextView
+        android:id="@+id/uid_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Device UID" />
+
+    <EditText
+        android:id="@+id/uid_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter device UID" />
+
+    <TextView
+        android:id="@+id/gpio_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPIO Pin" />
+
+    <Spinner
+        android:id="@+id/gpio_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:entries="@array/gpio_pins"/>
+
+
+    <TextView
+        android:id="@+id/esp_ip_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ESP IP Address" />
+
+    <EditText
+        android:id="@+id/esp_ip_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter ESP IP address" />
+
+</LinearLayout>

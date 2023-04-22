@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg3">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back_device_button"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/baseline_arrow_back_ios_24" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/device_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/device_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/uid_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UID"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+
+
+            <TextView
+                android:id="@+id/uid_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"/>
+
+
+            <TextView
+                android:id="@+id/device_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Device Type"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/device_type_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/gpio_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPIO"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/gpio_pin_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/detail_esp_ip_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESP IP"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/detail_esp_ip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Switch
+                android:id="@+id/device_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On/Off"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/edit_device_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    app:titleTextColor="@color/green"
+                    app:contentInsetEnd="0dp"
+                    app:minWidth="50dp"
+                    app:navigationIcon="@drawable/baseline_edit_note_24" />
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/delete_device_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    app:titleTextColor="@color/red"
+                    app:contentInsetEnd="0dp"
+                    app:minWidth="50dp"
+                    app:navigationIcon="@drawable/baseline_delete_forever_24" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

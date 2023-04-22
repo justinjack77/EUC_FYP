@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:background="@drawable/dbg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#80000000"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/dialog_device_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device Name"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/dialog_device_type_spinner_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device Type:"
+                android:textColor="@color/green" />
+
+
+            <Spinner
+                android:id="@+id/dialog_device_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Device Type" />
+
+            <TextView
+                android:id="@+id/dialog_device_gpio_pin_spinner_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GPIO Pin: "
+                android:textColor="@color/green" />
+
+            <Spinner
+                android:id="@+id/dialog_device_gpio_pin_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GPIO Pin" />
+
+            <TextView
+                android:id="@+id/dialog_esp_text_view_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ESP IP ADDRESS"
+                android:textColor="@color/green" />
+
+            <EditText
+                android:id="@+id/dialog_esp_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:hint="ESP IP ADDRESS" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

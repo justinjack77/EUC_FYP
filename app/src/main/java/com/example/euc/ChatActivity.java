@@ -56,22 +56,6 @@ public class ChatActivity extends AppCompatActivity {
         DatabaseReference currentUserRef = mDatabase.getReference("UsersList").child(currentUserId);
 
         mMessagesRef = currentUserRef.child("AddUsers").child(receiverId.replace(".", "_")).child("Messages");
-//        DatabaseReference receiverRef = currentUserRef.child("AddUsers").child(receiverId.replace(".", "_")).child("email");
-//
-//        receiverRef.addListenerForSingleValueEvent(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                if (snapshot.exists()) {
-//                    receiverEmail = snapshot.getValue(String.class);
-//                    getSupportActionBar().setTitle(receiverEmail);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                // Handle error
-//            }
-//        });
 
         messagesRecyclerView = findViewById(R.id.messagesRecyclerView);
         messagesRecyclerView.setLayoutManager(new LinearLayoutManager(this));

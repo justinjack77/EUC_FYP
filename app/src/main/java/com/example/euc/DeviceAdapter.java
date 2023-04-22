@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceViewHolder> {
-    private MyFirebaseMessagingService firebaseMessagingService;
+//    private MyFirebaseMessagingService firebaseMessagingService;
 
     static private String ESP_IP_ADDRESS;
     private Context context;
@@ -40,7 +40,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
         this.context = context;
         this.deviceList = deviceList;
         this.filteredDeviceList = deviceList;
-        firebaseMessagingService = new MyFirebaseMessagingService();
+//        firebaseMessagingService = new MyFirebaseMessagingService();
     }
 
     public void filter(String text) {
@@ -106,7 +106,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
             String gpioPin = device.getGpioPin();
             GPIO gpio = new GPIO(device.getGpioPin());
 
-            MyFirebaseMessagingService notificationService = new MyFirebaseMessagingService();
+//            MyFirebaseMessagingService notificationService = new MyFirebaseMessagingService();
             if (isChecked) {
                 Esp8266Client.turnOnGpioPin(ESP_IP_ADDRESS,userPath, gpio.getPIN());
                 Toast.makeText(context, "GPIO " + gpioPin + " turned on", Toast.LENGTH_SHORT).show();

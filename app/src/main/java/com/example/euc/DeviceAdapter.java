@@ -98,8 +98,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
         holder.deviceSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             device.setOn(isChecked);
             String deviceId = device.getKey();
-            String uid = device.getUid();
-//            String userPath = "UsersList/" + uid + "/DeviceList/" + deviceId;
+//            String uid = device.getUid();
             String userPath = user.getUid();
             DatabaseReference deviceRef = AddDeviceFragment.mDatabase.child(deviceId);
             deviceRef.setValue(device);
@@ -108,7 +107,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
 
 //            MyFirebaseMessagingService notificationService = new MyFirebaseMessagingService();
             if (isChecked) {
-                Esp8266Client.turnOnGpioPin(ESP_IP_ADDRESS,userPath, gpio.getPIN());
+                Esp8266Client.turnOnGpioPin(ESP_IP_ADDRESS, userPath, gpio.getPIN());
                 Toast.makeText(context, "GPIO " + gpioPin + " turned on", Toast.LENGTH_SHORT).show();
             } else {
                 Esp8266Client.turnOffGpioPin(ESP_IP_ADDRESS, userPath, gpio.getPIN());

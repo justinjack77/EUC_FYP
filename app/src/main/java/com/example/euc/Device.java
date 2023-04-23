@@ -11,12 +11,15 @@ public class Device {
     private String gpioPin;
     private String ESP_IP;
     DatabaseReference deviceRef;
+
     public void setDeviceRef(DatabaseReference deviceRef) {
         this.deviceRef = deviceRef;
     }
-    public Device() {}
 
-    public Device(String key, String name, String type, String uid, boolean isOn, String gpioPin,String ESP_IP) {
+    public Device() {
+    }
+
+    public Device(String key, String name, String type, String uid, boolean isOn, String gpioPin, String ESP_IP) {
         this.name = name;
         this.type = type;
         this.uid = uid;
@@ -31,8 +34,6 @@ public class Device {
     public String getGpioPin() {
         return gpioPin;
     }
-
-
 
     public String getName() {
         return name;

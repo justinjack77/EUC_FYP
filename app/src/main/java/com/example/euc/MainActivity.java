@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView addImageView,homeImageView,peopleOutlineImageView,settingsImageView;
 
-
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

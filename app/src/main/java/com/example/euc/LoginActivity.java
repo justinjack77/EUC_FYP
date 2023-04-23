@@ -22,14 +22,12 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class LoginActivity extends AppCompatActivity {
-
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private EditText emailEditText, passwordEditText;
     private TextView userDetailsTextView;
 
     Context context;
-//    FirebaseApp.initializeApp(getApplicationContext());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         FirebaseApp.initializeApp(this);
-        //
-//        SharedPreferences preferences = getSharedPreferences("my_app", MODE_PRIVATE);
-//        SharedPreferences.Editor editor = preferences.edit();
-//        editor.putString("auth_token", authToken);
-//        editor.apply();
-
-        //
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference("UsersList");

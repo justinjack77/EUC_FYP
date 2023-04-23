@@ -27,8 +27,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class DeviceDetailActivity extends AppCompatActivity {
 
-    private TextView deviceNameTextView, deviceTypeTextView, uidTextView, gpioPinTextView,ESP_IP;
-//    private Switch deviceSwitch;
+    private TextView deviceNameTextView, deviceTypeTextView, uidTextView, gpioPinTextView, ESP_IP;
+    //    private Switch deviceSwitch;
     private androidx.appcompat.widget.Toolbar deleteButton, editButton, backButton;
     private DatabaseReference deviceRef;
     private String deviceId;
@@ -59,7 +59,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
 
         deviceId = getIntent().getStringExtra("deviceId");
         //Get detail data from Firebase
-        deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList").child(deviceId);
+        deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".", "_")).child("DeviceList").child(deviceId);
         deviceRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -82,7 +82,6 @@ public class DeviceDetailActivity extends AppCompatActivity {
                 Toast.makeText(DeviceDetailActivity.this, "Failed to read device", Toast.LENGTH_SHORT).show();
             }
         });
-
 
 
         deleteButton.setOnClickListener(v -> {
@@ -112,7 +111,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
             Spinner gpioSpinner = view.findViewById(R.id.gpio_spinner);
             EditText espIpEditText = view.findViewById(R.id.esp_ip_edit_text);
 
-           // Set the input fields with the current device details
+            // Set the input fields with the current device details
             nameEditText.setText(deviceNameTextView.getText());
             ArrayAdapter<String> adapter = (ArrayAdapter<String>) typeSpinner.getAdapter();
             typeSpinner.setSelection(adapter.getPosition(deviceTypeTextView.getText().toString()));
@@ -139,7 +138,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
                 String gpioPin = gpioSpinner.getSelectedItem().toString();
 
                 // Update the device in Firebase
-                Device newDevice = new Device(deviceId, name, type, uid,true, gpioPin, espIp);
+                Device newDevice = new Device(deviceId, name, type, uid, true, gpioPin, espIp);
 
                 deviceRef.setValue(newDevice);
 
@@ -153,14 +152,13 @@ public class DeviceDetailActivity extends AppCompatActivity {
         });
 
 
-
         backButton.setOnClickListener(v -> finish());
     }
 
     private void saveDeviceList(Device device) {
         FirebaseUser user = mAuth.getCurrentUser();
         if (user != null) {
-            DatabaseReference devicesRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList");
+            DatabaseReference devicesRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".", "_")).child("DeviceList");
             if (device.getKey() != null) {
                 devicesRef.child(device.getKey()).setValue(device);
             } else {

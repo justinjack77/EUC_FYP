@@ -49,7 +49,6 @@ public class AddDeviceFragment extends Fragment {
     private EditText searchInput;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_add_device, container, false);
@@ -102,7 +101,7 @@ public class AddDeviceFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         //Add new device to Firebase
-        mDatabase = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList");
+        mDatabase = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".", "_")).child("DeviceList");
         userDetailsTextView = view.findViewById(R.id.userDetailsTextView);
 
         deviceRecyclerView = view.findViewById(R.id.device_recycler_view);

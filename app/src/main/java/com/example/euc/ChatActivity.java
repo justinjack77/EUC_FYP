@@ -55,7 +55,7 @@ public class ChatActivity extends AppCompatActivity {
             return;
         }
 
-        String currentUserId = mAuth.getCurrentUser().getEmail().replace(".","_");
+        String currentUserId = mAuth.getCurrentUser().getEmail().replace(".", "_");
         DatabaseReference currentUserRef = mDatabase.getReference("UsersList").child(currentUserId);
 
         mMessagesRef = currentUserRef.child("AddUsers").child(receiverId.replace(".", "_")).child("Messages");
@@ -98,9 +98,8 @@ public class ChatActivity extends AppCompatActivity {
     }
 
 
-
     private void sendMessage(String messageText) {
-        String currentUserId = mAuth.getCurrentUser().getEmail().replace(".","_");
+        String currentUserId = mAuth.getCurrentUser().getEmail().replace(".", "_");
         Message message = new Message(currentUserId, receiverId, messageText, System.currentTimeMillis());
 
 

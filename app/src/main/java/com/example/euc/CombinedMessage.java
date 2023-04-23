@@ -6,9 +6,10 @@ public class CombinedMessage {
     private String text;
     private Long timestamp;
 
-    public CombinedMessage(String senderId){
+    public CombinedMessage(String senderId) {
         this.senderId = senderId;
     }
+
     public CombinedMessage(String senderId, String receiverId, String text, Long timestamp) {
         this.senderId = senderId;
         this.receiverId = receiverId;

@@ -28,7 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 public class DeviceDetailActivity extends AppCompatActivity {
 
     private TextView deviceNameTextView, deviceTypeTextView, uidTextView, gpioPinTextView,ESP_IP;
-    private Switch deviceSwitch;
+//    private Switch deviceSwitch;
     private androidx.appcompat.widget.Toolbar deleteButton, editButton, backButton;
     private DatabaseReference deviceRef;
     private String deviceId;
@@ -46,7 +46,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
         deviceTypeTextView = findViewById(R.id.device_type_text_view);
         uidTextView = findViewById(R.id.uid_text_view);
         gpioPinTextView = findViewById(R.id.gpio_pin_spinner);
-        deviceSwitch = findViewById(R.id.device_switch);
+//        deviceSwitch = findViewById(R.id.device_switch);
         deleteButton = findViewById(R.id.delete_device_button);
         editButton = findViewById(R.id.edit_device_button);
         backButton = findViewById(R.id.back_device_button);
@@ -83,25 +83,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
             }
         });
 
-        deviceSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            deviceRef.child("on").setValue(isChecked);
-            String gpioPin = gpioPinTextView.getText().toString();
-            GPIO gpio = new GPIO(gpioPin.trim());
-//            String uid = uidTextView.getText().toString().trim();
-//            String uid = Auth.current
-//            String userPath = "UsersList/" + user.getUid() + "/DeviceList/" + deviceId;
-            String userPath = user.getUid();
 
-            if (isChecked) {
-                // Turn on the GPIO
-                Esp8266Client.turnOnGpioPin(ESP_IP_ADDRESS,userPath, gpio.getPIN());
-                Toast.makeText(DeviceDetailActivity.this, "GPIO " + gpioPin + " turned on", Toast.LENGTH_SHORT).show();
-            } else {
-                // Turn off the GPIO
-                Esp8266Client.turnOffGpioPin(ESP_IP_ADDRESS, userPath, gpio.getPIN());
-                Toast.makeText(DeviceDetailActivity.this, "GPIO " + gpioPin + " turned off", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         deleteButton.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

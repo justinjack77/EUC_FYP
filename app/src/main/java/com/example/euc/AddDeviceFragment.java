@@ -101,6 +101,7 @@ public class AddDeviceFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
+        //Add new device to Firebase
         mDatabase = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList");
         userDetailsTextView = view.findViewById(R.id.userDetailsTextView);
 

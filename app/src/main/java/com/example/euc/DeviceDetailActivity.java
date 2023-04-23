@@ -58,6 +58,7 @@ public class DeviceDetailActivity extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
 
         deviceId = getIntent().getStringExtra("deviceId");
+        //Get detail data from Firebase
         deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList").child(deviceId);
         deviceRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -101,7 +101,7 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
             String uid = device.getUid();
 //            String userPath = "UsersList/" + uid + "/DeviceList/" + deviceId;
             String userPath = user.getUid();
-            DatabaseReference deviceRef = AddFragment.mDatabase.child(deviceId);
+            DatabaseReference deviceRef = AddDeviceFragment.mDatabase.child(deviceId);
             deviceRef.setValue(device);
             String gpioPin = device.getGpioPin();
             GPIO gpio = new GPIO(device.getGpioPin());

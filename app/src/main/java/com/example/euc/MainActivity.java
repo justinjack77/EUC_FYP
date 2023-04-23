@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         addImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                replaceFragment(new AddFragment());
+                replaceFragment(new AddDeviceFragment());
             }
         });
 

@@ -34,7 +34,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddFragment extends Fragment {
+public class AddDeviceFragment extends Fragment {
 
     public static DatabaseReference mDatabase;
 
@@ -52,7 +52,7 @@ public class AddFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_add, container, false);
+        return inflater.inflate(R.layout.fragment_add_device, container, false);
     }
 
     @Override

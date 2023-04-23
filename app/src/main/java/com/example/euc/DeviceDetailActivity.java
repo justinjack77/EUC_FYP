@@ -58,8 +58,8 @@ public class DeviceDetailActivity extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
 
         deviceId = getIntent().getStringExtra("deviceId");
-        deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getUid()).child("DeviceList").child(deviceId);
-
+//        deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getUid()).child("DeviceList").child(deviceId);
+        deviceRef = FirebaseDatabase.getInstance().getReference("UsersList").child(user.getEmail().replace(".","_")).child("DeviceList").child(deviceId);
         deviceRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

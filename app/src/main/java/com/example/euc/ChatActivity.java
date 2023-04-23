@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,11 +35,13 @@ public class ChatActivity extends AppCompatActivity {
 
     private static final int VIEW_TYPE_SENDER = 1;
     private static final int VIEW_TYPE_RECEIVER = 2;
+    private TextView receiverEmailTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        receiverEmailTextView = findViewById(R.id.receiverEmailTextView);
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
@@ -70,6 +73,24 @@ public class ChatActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(messageText)) {
                 sendMessage(messageText);
                 messageEditText.setText("");
+            }
+        });
+
+        // Get the receiver's email
+        DatabaseReference receiverUserRef = mDatabase.getReference("UsersList").child(receiverId.replace(".", "_"));
+        receiverUserRef.child("email").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    receiverEmail = snapshot.getValue(String.class);
+                    // Set the email to the TextView
+                    receiverEmailTextView.setText(receiverEmail);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Handle error
             }
         });
 

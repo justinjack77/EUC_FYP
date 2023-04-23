@@ -30,7 +30,7 @@
             android:name=".DeviceDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".AccountActivity"
+            android:name=".AccountLogoutActivity"
             android:exported="false" />
         <activity android:name=".AddDeviceFragment" />
         <activity android:name=".MainActivity" />

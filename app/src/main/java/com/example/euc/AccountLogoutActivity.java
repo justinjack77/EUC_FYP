@@ -7,12 +7,12 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AccountActivity extends AppCompatActivity {
+public class AccountLogoutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_account_logout);
 
         // Initialize the logout button
         Button logoutButton = findViewById(R.id.logoutButton);
@@ -22,7 +22,7 @@ public class AccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Navigate back to LoginActivity
-                Intent intent = new Intent(AccountActivity.this, LoginActivity.class);
+                Intent intent = new Intent(AccountLogoutActivity.this, LoginActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

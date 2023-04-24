@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceViewHolder> {
-//    private MyFirebaseMessagingService firebaseMessagingService;
 
     static private String ESP_IP_ADDRESS;
     private Context context;
@@ -40,7 +39,6 @@ public class DeviceAdapter extends RecyclerView.Adapter<DeviceAdapter.DeviceView
         this.context = context;
         this.deviceList = deviceList;
         this.filteredDeviceList = deviceList;
-//        firebaseMessagingService = new MyFirebaseMessagingService();
     }
 
     public void filter(String text) {

@@ -17,7 +17,6 @@ public class Esp8266Client {
     private static final String TAG = "Esp8266Client";
     private static int Pin;
 
-
     public static void turnOnGpioPin(String ipAddress, String userPath, int pin) {
         Pin = pin;
         String url = "http://" + ipAddress + "/gpio_on?userPath=" + userPath + "&pin=" + Pin;

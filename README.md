@@ -1,5 +1,16 @@
 # EUC_FYP
 Upload to ESP8266MOD
+User Guides
+1.	Install Android studio and Arduino IDE
+2.	In Arduino IDE add Additional boards manager URLs: http://arduino.esp8266.com/stable/package_esp8266com_index.json
+3.	To add Additional bord go to File > Preferences > Additional boards manager URLs: copy and paste this “http://arduino.esp8266.com/stable/package_esp8266com_index.json”
+4.	Upload code to ESP8266MOD
+5.	Clone the project from github (https://github.com/justinjack77/EUC_FYP/tree/master)
+6.	Make sure you download Virtual Device in Android Studio 
+7.	Run and Test
+8.	Also can build APK file and run on physical device
+
+
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
